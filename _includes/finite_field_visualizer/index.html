@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="/assets/finite_field_visualizer/index.css"/>
+<div id="maindiv">
+
+  <div style="display: flex; align-items: center;">
+    <label for="fieldSize">Choose Field Size (F<sub>p</sub>): </label>
+    <select id="fieldSize">
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="7">7</option>
+      <option value="11" selected>11</option>
+      <option value="13">13</option>
+      <option value="17">17</option>
+      <option value="19">19</option>
+      <option value="23">23</option>
+    </select>
+  </div>
+
+  <div class="matrix">
+    <span class="aequals">A =</span> 
+    <span class="paren">(</span>
+    <div class="matrix-grid">
+      <input type="number" id="a11" value="1">
+      <input type="number" id="a12" value="0">
+      <input type="number" id="a21" value="0">
+      <input type="number" id="a22" value="1">
+    </div>
+    <span class="paren">)</span>
+  </div>
+
+  <div class="options">
+    <label><input type="checkbox" id="showTransformation" checked />Show Transformation</label>
+    <label><input type="checkbox" id="showEigenspaces" checked />Show Eigenspaces</label>
+  </div>
+
+  <canvas id="visualizer" width="500" height="500"></canvas>
+
+  <div id="eigenInfo"></div>
+
+</div>
+
+<script src="/assets/finite_field_visualizer/index.js"></script>
